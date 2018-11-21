@@ -8,7 +8,7 @@ Folder monitoring service exercise using : Node.js , React  and MongoDB.
 ##  How to install
 
 ```bash
-git clone 
+git clone https://github.com/stavgayer/FolderMonitoring.git
 cd FolderMonitoring
 
 # Install backend dependencies
