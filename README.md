@@ -1,42 +1,28 @@
-# Passport-Tutorial
+# Folder Monitoring Service
 
-Node.js authentication tutorial using Passport.js
+## Introduction
 
-### Prerequisites
+Folder monitoring service exercise using : Node.js , React  and MongoDB.
 
-Make sure you have these installed on your machine
 
-* [Node.js](https://nodejs.org/en/download/)
-* [MongoDB](https://www.mongodb.com)
-* **npm** This comes with Node.js, but make sure you check if you have it anyway
+##  How to install
 
-### Installing packages
+```bash
+git clone 
+cd FolderMonitoring
 
-Install packages
+# Install backend dependencies
+npm install
 
-```
-npm i
-```
-
-### Running the app
-
-To run the app (dev. mode)
-
-```
-npm start
+# Install frontend dependencies
+cd client
+npm install
 ```
 
-## Built With
+## Running on dev mode 
+Go back to root directory and then run 
+```
 
-* [Node.js](https://nodejs.org) - The backend framework used
-* [Express.js](https://github.com/expressjs/express) - Node.js framework used
-* [MongoDB](https://www.mongodb.com/) - Database platform used
+npm run dev
+```
 
-
-## Authors
-
-* **Antonio Erdeljac** - *Initial work* - [Passport-Tutorial](https://github.com/AntonioErdeljac/Blog-Tutorial)
-
-## Acknowledgments
-
-* This was a tutorial for my [Medium article](https://medium.com/p/4a56ed18e81e)
