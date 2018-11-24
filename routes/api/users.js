@@ -3,37 +3,37 @@ const router = require("express").Router();
 const Users = mongoose.model("Users");
 const auth = require("../../middleware/auth");
 // POST new user (only used to create the admin , this is why i dont validate data and etc...)
-// router.post("/", auth.optional, (req, res, next) => {
-//   const {
-//     body: { user }
-//   } = req;
+router.post("/", (req, res, next) => {
+  const {
+    body: { user }
+  } = req;
 
-//   if (!user.username) {
-//     return res.status(422).json({
-//       errors: {
-//         username: "is required"
-//       }
-//     });
-//   }
+  if (!user.username) {
+    return res.status(422).json({
+      errors: {
+        username: "is required"
+      }
+    });
+  }
 
-//   if (!user.password) {
-//     return res.status(422).json({
-//       errors: {
-//         password: "is required"
-//       }
-//     });
-//   }
+  if (!user.password) {
+    return res.status(422).json({
+      errors: {
+        password: "is required"
+      }
+    });
+  }
 
-//   const finalUser = new Users(user);
+  const finalUser = new Users(user);
 
-//   finalUser.setPassword(user.password);
+  finalUser.setPassword(user.password);
 
-//   return finalUser
-//     .save()
-//     .then(() => res.json({ user: finalUser.toAuthJSON() }));
-// });
+  return finalUser
+    .save()
+    .then(() => res.sendStatus(200));
+});
 
-// //login route
+//login route
 router.post("/login", (req, res, next) => {
   const {
     body: { user }
